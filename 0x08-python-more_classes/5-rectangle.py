@@ -56,7 +56,7 @@ class Rectangle:
     def __str__(self):
         """prints rectangle using #"""
         if self.width == 0 or self.height == 0:
-            return ""
+            print()
         else:
             display = ""
             for i in range(self.height):
@@ -67,3 +67,11 @@ class Rectangle:
                 else:
                     display += "\n"
             return display
+
+    def __repr__(self):
+        """prints string"""
+        return "Rectangle({}, {})".format(self.__width, self.__height)
+
+    def __del__(self):
+        """ Delete """
+        print("Bye rectangle...")
