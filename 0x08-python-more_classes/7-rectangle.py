@@ -58,12 +58,12 @@ class Rectangle:
 
     def __str__(self):
         """prints rectangle using #"""
-        if self.width == 0 or self.height == 0:
+        if self.__width == 0 or self.__height == 0:
             print()
         else:
             display = ""
-            for i in range(self.height):
-                for j in range(self.width):
+            for i in range(self.__height):
+                for j in range(self.__width):
                     display += self.print_symbol
                 if i == self.height - 1:
                     continue
@@ -73,7 +73,7 @@ class Rectangle:
 
     def __repr__(self):
         """prints string"""
-        return "Rectangle({}, {})".format(self.__width, self.__height)
+        return ("Rectangle({}, {})".format(self.__width, self.__height))
 
     def __del__(self):
         """ Delete """
