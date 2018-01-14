@@ -9,6 +9,7 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
+    text = text.strip()
     space = False
     temp = ''
     for i in text:
