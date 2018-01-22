@@ -10,10 +10,10 @@ def read_lines(filename="", nb_lines=0):
     """
     i = 0
     with open(filename, encoding='utf-8') as a_file:
-        for line in a_file:
-            if nb_lines <= 0:
-                print(a_file.read())
-            else:
+        if nb_lines <= 0:
+            print(a_file.read(), end="")
+        else:
+            for line in a_file:
                 while i < nb_lines:
-                   print("{}".format(line.rstrip()))
-                   i += 1
+                    print(line, end="")
+                    i += 1
