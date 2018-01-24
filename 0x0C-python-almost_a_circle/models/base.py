@@ -26,7 +26,7 @@ class Base:
         """
         returns JSON rep
         """
-        if json_string is None or !(json_string):
+        if json_string is None:
             return '[]'
         return json.dumpts(list_dictionaries)
 
@@ -41,6 +41,6 @@ class Base:
         """
         list from json
         """
-        if json_string is None or !(json_string):
+        if json_string is None:
             return []
         return json.loads(json_string)
