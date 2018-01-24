@@ -2,6 +2,7 @@
 """
 This module contains the class Base
 """
+import json
 
 
 class Base:
