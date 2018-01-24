@@ -9,7 +9,7 @@ class TestBase(unittest.TestCase):
     tests class Bass
     """
 
-    def id_test(self):
+    def test_id(self):
         """
         tests id
         """
