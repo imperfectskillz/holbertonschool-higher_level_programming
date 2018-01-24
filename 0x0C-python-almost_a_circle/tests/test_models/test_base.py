@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Unittest class Base"""
+"""Unittest for Base Class"""
 import unittest
 from models.base import Base
 
