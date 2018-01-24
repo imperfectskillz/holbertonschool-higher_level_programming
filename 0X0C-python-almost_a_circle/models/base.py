@@ -20,16 +20,26 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
+    @staticmethod
     def to_json_string(list_dictionaries):
         """
         returns JSON rep
         """
         if json_string is None or !(json_string):
-            return list
+            return '[]'
         return json.dumpts(list_dictionaries)
 
+    @staticmethod
     def save_to_file(cls, list_objs):
         """
         writes list_objs to file
         """
-        
+
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        list from json
+        """
+        if json_string is None or !(json_string):
+            return []
+        return json.loads(json_string)
