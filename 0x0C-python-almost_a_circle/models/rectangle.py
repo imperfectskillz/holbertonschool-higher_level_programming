@@ -135,4 +135,3 @@ class Rectangle(Base):
         dictionary rep
         """
         return ({'id': self.id, 'width': self.width, 'height': self.height, 'x': self.x, 'y': self.y})
-    
