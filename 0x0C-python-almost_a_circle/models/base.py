@@ -26,8 +26,8 @@ class Base:
         """
         returns JSON rep
         """
-        if not list_dictionaries or len(list_dictionaries) == 0:
-            return '[]'
+        if not list_dictionaries:
+            return "[]"
         return json.dumps(list_dictionaries)
 
     @staticmethod
