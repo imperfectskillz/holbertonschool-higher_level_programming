@@ -5,9 +5,6 @@ from models.base import Base
 
 
 class TestBase(unittest.TestCase):
-    """
-    tests class Bass
-    """
 
     def test_id(self):
         """
@@ -15,9 +12,21 @@ class TestBase(unittest.TestCase):
         """
         a = Base()
         self.assertEqual(a.id, 1)
-
         b = Base()
         self.assertEqual(b.id, 5)
-
-        c = Base(10)
+        c = Base()
         self.assertEqual(c.id, 10)
+
+    def test_with_value(self):
+        """
+        given value
+        """
+        a = Base(4)
+        self.assertEqual(a.id, 4)
+
+    def test_string(self):
+        """
+        tests with string
+        """
+        a = Base("333")
+        self.assertEqual(a.id, "333")

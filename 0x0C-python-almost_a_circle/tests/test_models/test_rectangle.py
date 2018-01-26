@@ -8,9 +8,7 @@ from models.rectangle import Rectangle
 
 
 class TestRect(unittest.TestCase):
-    """
-    test cases for rectangle
-    """
+
     def test_init(self):
         """empty"""
         with self.assertRaises(TypeError):
@@ -31,3 +29,28 @@ class TestRect(unittest.TestCase):
         self.assertEqual(rect2.x, 6)
         self.assertEqual(rect2.y, 11)
         self.assertEqual(rect2.id, 13)
+
+    def test_area(self):
+        """
+        tests area
+        """
+        a = Rectangle(1, 2)
+        self.assertEqual(a.area(), 2)
+
+    def test_width(self):
+        """
+        invalid type
+        """
+        with self.assertRaises(TypeError):
+            a = Rectangle("1", 2)
+
+    def test_value(self):
+        """
+        tests valid value
+        """
+        with self.assertRaises(ValueError):
+            a = Rectangle(5, 0)
+        with self.assertRaises(ValueError):
+            a = Rectangle(0, 4)
+
+    
