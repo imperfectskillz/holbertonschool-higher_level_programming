@@ -28,7 +28,7 @@ class Base:
         """
         if not list_dictionaries or len(list_dictionaries) == 0:
             return '[]'
-        return json.dumpts(list_dictionaries)
+        return json.dumps(list_dictionaries)
 
     @staticmethod
     def save_to_file(cls, list_objs):
