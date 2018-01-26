@@ -96,7 +96,7 @@ class Rectangle(Base):
         """
         returns area
         """
-        return self.widht * self.height
+        return (self.widht * self.height)
 
     def display(self):
         """
