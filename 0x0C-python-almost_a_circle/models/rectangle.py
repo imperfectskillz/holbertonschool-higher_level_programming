@@ -119,13 +119,16 @@ class Rectangle(Base):
         """
         updates attributes
         """
-        if args and len(args) != 0:
-            for i in range(len(args)):
-                self.id = args[0]
-                self.width = args[1]
-                self.height = args[2]
-                self.x = args[3]
-                self.y = args[4]
+        if args:
+            try:
+                for i in range(len(args)):
+                    self.id = args[0]
+                    self.width = args[1]
+                    self.height = args[2]
+                    self.x = args[3]
+                    self.y = args[4]
+            except IndexError:
+                pass
         else:
             for k, v in kwargs.items():
                 setattr(self, key, value)
