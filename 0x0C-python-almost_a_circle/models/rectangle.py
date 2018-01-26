@@ -119,7 +119,7 @@ class Rectangle(Base):
         """
         updates attributes
         """
-        if len(args) != 0:
+        if args and len(args) != 0:
             for i in range(len(args)):
                 self.id = args[0]
                 self.width = args[1]
@@ -134,6 +134,5 @@ class Rectangle(Base):
         """
         dictionary rep
         """
-        return ({'x': self.id, 'y': self.y, 'id': self.id, 'height': self.height, 'width': self.width})
-
+        return ({'id': self.id, 'width': self.width, 'height': self.height, 'x': self.x, 'y': self.y})
     

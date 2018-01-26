@@ -26,7 +26,7 @@ class Base:
         """
         returns JSON rep
         """
-        if json_string is None:
+        if not list_dictionaries or len(list_dictionaries) == 0:
             return '[]'
         return json.dumpts(list_dictionaries)
 
@@ -35,6 +35,14 @@ class Base:
         """
         writes list_objs to file
         """
+        result = []
+        with open("{}.json".format(cls.__name__), "w") as a_file:
+            if list_objs is None:
+                a_file.write(Base.to_json_string(result)
+            else:
+                for thing in list_objs:
+                    result.append(thing.to_dictionary())
+                a_file.write(Base.to_json_string(result))
 
     @staticmethod
     def from_json_string(json_string):
@@ -44,3 +52,24 @@ class Base:
         if json_string is None:
             return []
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        Returns instances with set attr
+        """
+        dummy = cls(1, 1)
+        dummy.update(**dictionary)
+        return dummy
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """
+        returns list of instances
+        """
+        try:
+            with open("{}.json".format(cls.__name__)) as a_file:
+                things = Base.from_json_string(a_file.read())
+                return ([cls.create(**obj) for obj in objs]
+        except:
+            return []

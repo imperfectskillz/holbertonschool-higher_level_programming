@@ -42,7 +42,7 @@ class Square(Rectangle):
         """
         updates
         """
-        if len(args) != 0:
+        if args and len(args) != 0:
             for i in range(len(args)):
                 self.id = args[0]
                 self.size = args[1]
