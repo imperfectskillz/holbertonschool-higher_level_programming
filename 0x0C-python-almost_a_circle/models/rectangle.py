@@ -131,7 +131,7 @@ class Rectangle(Base):
                 pass
         else:
             for k, v in kwargs.items():
-                setattr(self, key, value)
+                setattr(self, k, v)
 
     def to_dictionary(self):
         """
