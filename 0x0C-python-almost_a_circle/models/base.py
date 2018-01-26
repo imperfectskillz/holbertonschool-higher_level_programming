@@ -71,6 +71,6 @@ class Base:
         try:
             with open("{}.json".format(cls.__name__)) as a_file:
                 objs = Base.from_json_string(a_file.read())
-                return ([cls.create(**obj) for obj in objs]
+                return ([cls.create(**obj) for obj in objs])
         except:
             return []
