@@ -74,3 +74,10 @@ class Base:
                 return ([cls.create(**obj) for obj in objs])
         except:
             return []
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """
+        Return instances from csv
+        """
+        return []
