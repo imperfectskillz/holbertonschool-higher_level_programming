@@ -45,17 +45,6 @@ class Base:
         with open('{}.json'.format(cls.__name__), 'w') as a_file:
             a_file.write(Base.to_json_string(result))
 
-    @classmethod
-    def asave_to_file(cls, list_objs):
-        """Saves JSON of list_objs to a file."""
-        if list_objs is None:
-            dict_list = []
-        else:
-            dict_list = [inst.to_dictionary() for inst in list_objs]
-        with open('{}.json'.format(cls.__name__), 'w') as f:
-            f.write(Base.to_json_string(dict_list))
-
-
     @staticmethod
     def from_json_string(json_string):
         """
