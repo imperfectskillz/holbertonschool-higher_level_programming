@@ -43,14 +43,20 @@ class Square(Rectangle):
         updates
         """
         if args and len(args) != 0:
-            for i in range(len(args)):
-                self.id = args[0]
-                self.size = args[1]
-                self.x = args[2]
-                self.y = args[3]
+            try:
+                for i in range(len(args)):
+                    self.id = args[0]
+                    self.size = args[1]
+                    self.x = args[2]
+                    self.y = args[3]
+            except:
+                pass
         else:
-            for k, v in kwars.items():
-                setattr(self, k, v)
+            for k, v in kwargs.items():
+                try:
+                    setattr(self, k, v)
+                except:
+                    pass
 
     def to_dictionary(self):
         """
