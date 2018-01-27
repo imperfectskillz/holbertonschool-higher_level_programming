@@ -87,7 +87,7 @@ class Rectangle(Base):
         """
         if not isinstance(value, int):
             raise TypeError("{} must be an integer".format(name))
-        if (name == 'height' or name == 'width') and value <=0:
+        if (name == 'height' or name == 'width') and value <= 0:
             raise ValueError("{} must be > 0".format(name))
         if (name == 'x' or name == 'y') and value < 0:
             raise ValueError("{} must be >= 0".format(name))
