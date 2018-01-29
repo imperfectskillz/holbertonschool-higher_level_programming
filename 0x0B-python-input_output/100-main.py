@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-magic_string = __import__('100-magic_string').magic_string
+append_after = __import__('100-append_after').append_after
 
-for i in range(10):
-    print(magic_string())
+append_after("append_after_100.txt", "Python", "\"C is fun!\"\n")
