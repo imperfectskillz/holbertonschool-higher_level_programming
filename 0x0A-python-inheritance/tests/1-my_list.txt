@@ -3,8 +3,8 @@
 >>> list = MyList()
 
 >>> list = [3, 4, 2, 1, 0]
->>> list.print_sorted()
-[0, 1, 2, 3, 4]
+>>> print(list)
+[3, 4, 2, 1, 0]
 
 >>> randomList = MyList()
 >>> randomList = [3, 1, 0, 5, 4]
