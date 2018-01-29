@@ -45,10 +45,10 @@ class Node:
         """
         sets node_next as value
         """
-        if value is not None or not isinstance(value, Node):
-            raise TypeError("next_node must be a Node object")
-        else:
+        if isinstance(value, Node) or value is None:
             self.__next_node = value
+        else:
+            raise TypeError("next_node must be a Node object")
 
 class SinglyLinkedList:
     """
@@ -87,6 +87,6 @@ class SinglyLinkedList:
             self.__head = Node(value, self.__head)
             return
         current = self.__head
-        while value > current.next_node.data:
+        while current.next_node is not None and value > current.next_node.data:
             current = current.next_node
         current.next_node = Node(value, current.next_node)
