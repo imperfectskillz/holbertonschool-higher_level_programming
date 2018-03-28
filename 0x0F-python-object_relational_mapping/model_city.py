@@ -4,7 +4,7 @@ Class City
 """
 
 from model_state import Base
-from sqlalchemy.orgm import relationship
+from sqlalchemy.orm import relationship
 from sqlalchemy import Column, Integer, String, ForeignKey
 
 class City(Base):
