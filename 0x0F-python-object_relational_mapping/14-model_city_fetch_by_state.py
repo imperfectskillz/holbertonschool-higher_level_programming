@@ -5,7 +5,7 @@ Uses SQLAlchemy to print state objects
 
 from sys import argv
 from model_state import Base, State
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import sessionmaker, relationship
 from sqlalchemy import create_engine
 from model_city import City
 
