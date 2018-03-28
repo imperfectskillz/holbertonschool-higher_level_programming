@@ -17,4 +17,4 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     result = session.query(State, City).filter(City.state_id == State.id).all()
     for obj in result:
-        print('{}: ({}) {}'.format(obj[0], obj[1], obj[2]))
+        print("{}: ({}) {}".format(obj[0].name, obj[1].id, obj[2].name))
