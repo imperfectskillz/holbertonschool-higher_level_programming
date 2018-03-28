@@ -13,7 +13,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     Base.metadata.create_all(engine)
-    result = session.query(State).filter(State.name.like('%a%')).order_by(State.id)
-    if result is not None:
+    result = session.query(State).filter(State.name.like('%a%')).order_by(State.id).all()
+    for x in result:
         print("{}: {}".format(result.id, result.name))
 
