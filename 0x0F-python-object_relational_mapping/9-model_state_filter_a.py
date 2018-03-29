@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Lists all state objects
+Lists all state objects containing 'a'
 """
 
 from sqlalchemy.orm import sessionmaker
@@ -18,4 +18,4 @@ if __name__ == "__main__":
     (State.name.like('%a%')).order_by(State.id).all()
     if result:
         for x in result:
-            print("{}: {}".format(result.id, result.name))
+            print("{}: {}".format(x.id, x.name))
