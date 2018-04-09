@@ -3,7 +3,7 @@
 use request package display variable x-request
 """
 import requests
-import sys
+from sys import argv
 
 
 if __name__ == "__main__":
