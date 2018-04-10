@@ -1,2 +1,0 @@
-#!/usr/bin/python3
-export PYCODE='print("Holberton School:{}".format(88+10))'
