@@ -7,7 +7,7 @@ from sys import argv
 
 
 if __name__ == "__main__":
-    if argv[1] is not None:
+    if len(argv) > 1:
         q = argv[1]
     else:
         q = ""
