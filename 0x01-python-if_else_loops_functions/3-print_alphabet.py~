@@ -1,4 +1,0 @@
-#!/usr/bin/python3
-for value in range(ord('a'), ord('z')+1):
-    if value != q and value != e:
-        print(chr(value), end="")
