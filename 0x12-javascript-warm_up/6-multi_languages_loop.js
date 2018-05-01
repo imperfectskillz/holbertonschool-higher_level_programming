@@ -1,12 +1,12 @@
 #!/usr/bin/node
 
-var phrases = [
+let phrases = [
   'C is fun',
   'Python is cool',
   'Javascript is amazing'
 ];
 
-var i;
+let i;
 for (i = 0; i < phrases.length; i++) {
   console.log(phrases[i]);
 }
