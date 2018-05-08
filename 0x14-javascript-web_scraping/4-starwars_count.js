@@ -5,7 +5,8 @@ let request = require('request');
 request(process.argv[2], function (error, response, body) {
     if (error) {
 	console.log(error);
-    } else if (response.statusCode === 200) {
+    }
+    if (response.statusCode === 200) {
 	let count = 0;
 	for (let film in JSON.parse(body).results) {
 	    let charac = film['characters'];
